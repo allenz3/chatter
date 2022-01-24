@@ -1,61 +1,63 @@
+/* App styles */
 .App {
-  background: rgb(88, 117, 245);
+  background: #AA90DD;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
+/* header styles, contains logo and title */
 .header {
-  height: 4rem;
+  height: 6rem;
   width: 100%;
-  border-bottom: 2px solid white;
+  border-bottom: 4px solid white;
   display: flex;
   align-items: center;
   padding: 0 1rem;
   background: rgba(255, 255, 255, 0.3);
 }
-
+/* logo styles */
 .logo {
   height: 3.5rem;
   width: 3.5rem;
-  background: url("https://pic.onlinewebfonts.com/svg/img_308868.png");
+  background: url("https://c1.staticflickr.com/1/810/40014898725_02bafb8380_b.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
-  border: 1px solid white;
+  border: 4px solid white;
 }
-
+/* webpage text title styles */
 .title {
   color: white;
+  font-family: monospace;
   font-weight: bold;
   font-size: 2rem;
   margin-left: 1rem;
 }
-
+/* footer styles */
 .footer {
   height: 4rem;
   width: 100%;
-  border-top: 2px solid white;
+  border-top: 4px solid white;
   display: flex;
   align-items: center;
   padding: 0 1rem;
   background: rgba(255, 255, 255, 0.3);
   position: relative;
 }
-
+/* user text input styles */
 .text-input {
   width: 100%;
-  border: 1px solid white;
+  border: 2px solid white;
   height: 2rem;
   border-radius: 1rem;
   padding: 0 1rem;
   background: black;
   color: white;
 }
-
-.send {
+/* send button styles */
+.send-button {
   background: white;
   border-radius: 50%;
   border: none;
