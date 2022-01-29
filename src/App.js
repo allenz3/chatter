@@ -1,18 +1,34 @@
 import './App.css';
+import TextInput from "./TextInput"
+import { useState } from "react"
+import Message from "./Message"
 
 function App() {
+  const [messages, setMessages] = useState([]);
+  // message sending function
+  function sendMessage(text) {
+    const newMessage = {
+      text,
+      time: Date.now(),
+      user: "Allen",
+    };
+    setMessages([newMessage, ...messages]);
+  }
+  console.log(messages);
   // one header container with the logo and the title, and one footer container with the user text input and the send button
   return (
-  <div className="App">
-    <header className="header">
-      <div className="logo" />
-      <span className="title">CHATTER</span>
-    </header>
-    <footer className="footer">
-      <input className="text-input" />
-      <button className="send-button">➞</button>
-    </footer>
-  </div>
+    <div className="App">
+      <header className="header">
+        <div className="logo" />
+        <span className="title">CHATTER</span>
+      </header>
+      <div className="messages">
+        {messages.map((msg) => {
+          return <Message {...msg} />;
+        })}
+      </div>
+      <TextInput sendMessage={sendMessage} />
+    </div>
   );
 }
 

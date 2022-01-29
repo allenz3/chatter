@@ -35,35 +35,21 @@
   font-size: 2rem;
   margin-left: 1rem;
 }
-/* footer styles */
-.footer {
-  height: 4rem;
-  width: 100%;
-  border-top: 4px solid white;
+/* messages container styles */
+.messages {
   display: flex;
-  align-items: center;
-  padding: 0 1rem;
-  background: rgba(255, 255, 255, 0.3);
-  position: relative;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  overflow: auto;
+  max-height: calc(100vh - 4rem - 4rem);
+  min-height: calc(100vh - 4rem - 4rem);
+  padding: 1rem;
 }
-/* user text input styles */
-.text-input {
-  width: 100%;
-  border: 2px solid white;
-  height: 2rem;
-  border-radius: 1rem;
-  padding: 0 1rem;
-  background: black;
+/* message styles */
+.message {
   color: white;
-}
-/* send button styles */
-.send-button {
-  background: white;
-  border-radius: 50%;
-  border: none;
-  height: 1.7rem;
-  width: 1.7rem;
-  position: absolute;
-  right: 1.15rem;
-  cursor: pointer;
+  background: black;
+  padding: 0.5rem 1rem;
+  margin: 0.2rem;
+  border-radius: 0.3rem;
 }
