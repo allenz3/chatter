@@ -3,7 +3,8 @@ import TextInput from "./TextInput"
 import { useState } from "react"
 import Message from "./Message"
 
-function App() {
+export default function App() {
+  // initialize useState
   const [messages, setMessages] = useState([]);
   // message sending function
   function sendMessage(text) {
@@ -15,7 +16,7 @@ function App() {
     setMessages([newMessage, ...messages]);
   }
   console.log(messages);
-  // one header container with the logo and the title, and one footer container with the user text input and the send button
+  // header container with the logo and the title, and message container with the inputted and sent text messages
   return (
     <div className="App">
       <header className="header">
@@ -32,8 +33,6 @@ function App() {
   );
 }
 
-export default App;
-
 /* Sources:
 https://github.com/Evanfeenstra/chatter_2022
 https://www.w3schools.com/css/css_background.asp
@@ -42,4 +41,5 @@ https://www.w3schools.com/csSref/css3_pr_background-size.asp
 https://unicode-table.com/en/279E/
 https://www.createdebate.com/debate/show/Oklahoma_City_Most_Normal_City_in_America
 https://coolors.co/aa90dd-ab9edd-aebadd-b1d6dd-b3f2dd
+https://www.w3schools.com/react/react_usestate.asp
 */

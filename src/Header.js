@@ -1,5 +1,5 @@
 import React from "react";
-
+// header class component
 export default class Header extends React.Component {
   constructor(props) {
     super(props);

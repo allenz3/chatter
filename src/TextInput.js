@@ -1,7 +1,7 @@
 import "./TextInput.css";
 import { useState } from "react";
 
-function TextInput(props) {
+export default function TextInput(props) {
   const [text, setText] = useState("");
 
   function send() {
@@ -13,7 +13,7 @@ function TextInput(props) {
       send();
     }
   }
-
+  // footer container with the user text input and the send button
   return (
     <footer className="footer">
       <input
@@ -28,5 +28,3 @@ function TextInput(props) {
     </footer>
   );
 }
-
-export default TextInput;
