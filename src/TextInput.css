@@ -29,4 +29,33 @@
   position: absolute;
   right: 1.15rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* hovering over send button */
+.send:hover {
+  background: black;
+  border: 2px solid white;
+}
+.send:hover svg {
+  stroke: white;
+}
+/* camera button styles */
+.camera {
+  margin-right: 0.8rem;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 50%;
+  border: none;
+  height: 1.7rem;
+  width: 1.7rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* making space for camera button */
+.text-input > input {
+  width: calc(100% - 50px);
 }

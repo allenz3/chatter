@@ -2,12 +2,19 @@ import './App.css';
 import TextInput from "./TextInput"
 import { useState } from "react"
 import Message from "./Message"
+import Camera from "react-snap-pic"
+import { use100vh } from "react-div-100vh"
 
-export default function App() {
+export default function App(props) {
+  const height = use100vh();
   // initialize useState
   const [messages, setMessages] = useState([]);
+  const [showCamera, setShowCamera] = useState(false);
   // message sending function
   function sendMessage(text) {
+    // prevents empty messages from being sent
+    if (!text.trim()) return;
+    // message object
     const newMessage = {
       text,
       time: Date.now(),
@@ -15,8 +22,13 @@ export default function App() {
     };
     setMessages([newMessage, ...messages]);
   }
-  console.log(messages);
-  // header container with the logo and the title, and message container with the inputted and sent text messages
+  // console.log(messages);
+  // link to picture taken by camera
+  const takePicture = (img) => {
+    console.log(img)
+    setShowCamera(false)
+  }
+  // header container with the logo and the title, and message container with the inputted and sent text messages, camera included
   return (
     <div className="App">
       <header className="header">
@@ -24,11 +36,15 @@ export default function App() {
         <span className="title">CHATTER</span>
       </header>
       <div className="messages">
-        {messages.map((msg) => {
-          return <Message {...msg} />;
+        {messages.map((msg, index) => {
+          // unique key prop for each child in the message list
+          return <Message {...msg} key={index} />;
         })}
       </div>
-      <TextInput sendMessage={sendMessage} />
+      {showCamera && <Camera takePicture={takePicture} />}
+      <TextInput sendMessage={sendMessage}
+        showCamera={() => setShowCamera(true)}
+      />
     </div>
   );
 }
