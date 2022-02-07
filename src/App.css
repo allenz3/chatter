@@ -12,14 +12,21 @@
   width: 100%;
   border-bottom: 4px solid white;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   padding: 0 1rem;
   background: rgba(255, 255, 255, 0.3);
+}
+/* flexbox container */
+.container {
+    display: flex;
 }
 /* logo styles */
 .logo {
   height: 3.5rem;
   width: 3.5rem;
+  margin: 0 0.5rem;
   background: url("https://c1.staticflickr.com/1/810/40014898725_02bafb8380_b.jpg");
   background-position: center;
   background-size: cover;
@@ -29,11 +36,14 @@
 }
 /* webpage text title styles */
 .title {
+  margin: 0 0.5rem;
   color: white;
   font-family: monospace;
   font-weight: bold;
   font-size: 2rem;
   margin-left: 1rem;
+  display: flex;
+  align-items: center;
 }
 /* messages container styles */
 .messages {
